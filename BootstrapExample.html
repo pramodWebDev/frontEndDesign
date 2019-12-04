@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+    <style>
+        .navbar-nav {
+            text-align: center;
+        }
+
+        .intro {
+            height: 350px;
+        }
+
+        .intro-left {
+            background-size: cover;
+            padding: 0;
+            background: url("https://www.thedeadbolt.com/wp-content/uploads/2012/06/suits-gabriel-macht-1.jpg");
+            background-repeat: no-repeat;
+
+
+        }
+        .services-content{
+            padding: 30px;
+        }
+        .intro-right2 {
+            background: url("data:image/jpeg;base64,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");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .all-team{
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        .client-col{
+            text-align: center;
+            
+        }
+        .clients ul{
+            list-style: none;
+            margin: 0;
+            text-align: center;
+        }
+        .clients ul li{
+            padding: 20px;
+            display: inline-block;
+
+        }
+        .row-footer-main h5{
+            font-weight: 300;
+
+        }
+        .row-footer-main{
+           background: #444;
+            color: aliceblue;
+         }
+         .footer{
+             text-align: center;
+         }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">PEARSON <SMall>HARDMAN</SMall></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <a class="nav-link " href="#">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">WORK</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">BLOG</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">SERVICE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-lg-6 intro intro-left">
+                <h1>left</h1>
+            </div>
+            <div class="col-lg-6 intro intro-right">
+                <h1>
+                    Harvey Spector <small> Our best closure </small>
+                </h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae quaerat corrupti dicta consequatur
+                    magnam
+                    molestiae hic sint nobis! Eveniet dignissimos inventore magnam persp
+                    iciatis facilis dolorem ipsam. Minus, provident? Accusantium, dignissimos.</p>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="services-content col-lg-4">
+                <h2>ABC</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae quaerat corrupti dicta consequatur
+                    magnam
+                    molestiae hic sint nobis! Eveniet dignissimos inventore magnam persp
+                    iciatis facilis dolorem ipsam. Minus, provident? Accusantium, dignissimos.</p>
+            </div>
+            <div class="services-content col-lg-4">
+                <h2>PQR</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae quaerat corrupti dicta consequatur
+                    magnam
+                    molestiae hic sint nobis! Eveniet dignissimos inventore magnam persp
+                    iciatis facilis dolorem ipsam. Minus, provident? Accusantium, dignissimos.</p>
+            </div>
+            <div class="services-content col-lg-4">
+                <h2>XYZ</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae quaerat corrupti dicta consequatur
+                    magnam
+                    molestiae hic sint nobis! Eveniet dignissimos inventore magnam persp
+                    iciatis facilis dolorem ipsam. Minus, provident? Accusantium, dignissimos.</p>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="intro-left2 col-lg-6 intro">
+                <h1>Our goal</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto libero odit, laudantium nisi eos rerum debitis, odio excepturi facere maiores beatae unde, quas sit enim delectus pariatur nemo dolor eius!</p>
+            </div>
+            <div class="intro-right2 col-lg-6 intro">
+            </div>
+        </div>
+        <caption>Our Team</caption>
+        <img class="all-team" src="https://www.redwallpapers.com/public/redwallpapers-large-thumb/suits-harvey-specter-rachel-zane-donna-paulsen-mike-ross-louis-litt-jessica-pearson-harold-jakowski-free-stock-photos-images-hd-wallpaper.jpg" alt="Team image">
+   
+        <div class="row clients">
+            <h1 class="client-col col-12">Our clients</h1> <br>
+            <ul class="col-12">
+                <li>Goldman sachs</li>
+                <li>Dragman Inc.</li>
+                <li>Delloite</li>
+                <li>Fintech Ltd.</li>
+                <li>Avatador Sons</li>
+                <li>Patrics Hermon</li>
+            </ul>
+        </div>
+
+        <div class="row row-footer-main">
+            <div class="footer-main-box col-md-6 col-sm-6">
+                <h3>Pearson Hardman</h3>
+                <h5>HOME</h5>
+                <H5>BLOG</H5>
+                <H5>WORK</H5>
+                <H5>SERVICES</H5>
+                <H5>CONTACT</H5>
+            </div>
+            <div class="footer-main-box col-md-6 col-sm-6">
+                <h3>Find us</h3>
+                <address>
+                    36th floor Trump tower,<br> wall street road NewYork city Newyork.
+                </address>
+
+            </div>
+        </div>
+
+        <div class="footer ">
+            <h4> &copy; Pearson Hardman Inc. 2019 </h4>
+        </div>
+</body>
+
+</html>
